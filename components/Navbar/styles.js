@@ -74,10 +74,11 @@ export const getLogoLinkStyles = theme => ({
 
 // Logo 图片样式
 export const logoImageStyles = {
-  width: 32,
-  height: 32,
+  width: 40,
+  height: 40,
   mr: 1.5,
-  transition: 'transform 0.2s ease'
+  transition: 'transform 0.2s ease',
+  filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2))'
 };
 
 // Logo 文字样式
