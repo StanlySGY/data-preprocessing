@@ -26,7 +26,7 @@ export async function POST(request, { params }) {
 
     // 创建 dataset_info.json 配置
     const config = {
-      [`[Easy Dataset] [${projectId}] Alpaca`]: {
+      [`[数据预处理] [${projectId}] Alpaca`]: {
         file_name: 'alpaca.json',
         columns: {
           prompt: 'instruction',
@@ -35,7 +35,7 @@ export async function POST(request, { params }) {
           system: 'system'
         }
       },
-      [`[Easy Dataset] [${projectId}] ShareGPT`]: {
+      [`[数据预处理] [${projectId}] ShareGPT`]: {
         file_name: 'sharegpt.json',
         formatting: 'sharegpt',
         columns: {
@@ -49,7 +49,7 @@ export async function POST(request, { params }) {
           system_tag: 'system'
         }
       },
-      [`[Easy Dataset] [${projectId}] multilingual-thinking`]: {
+      [`[数据预处理] [${projectId}] multilingual-thinking`]: {
         file_name: 'multilingual-thinking.json',
         formatting: 'multilingual-thinking',
         columns: {

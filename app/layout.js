@@ -5,8 +5,8 @@ import { Toaster } from 'sonner';
 import { Provider } from 'jotai';
 
 export const metadata = {
-  title: 'Easy Dataset',
-  description: '一个强大的 LLM 数据集生成工具',
+  title: '数据预处理',
+  description: '一个强大的 LLM 数据集预处理工具',
   icons: {
     icon: '/imgs/logo.ico' // 更新为正确的文件名
   }

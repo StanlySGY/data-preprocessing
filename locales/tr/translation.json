@@ -331,7 +331,7 @@
     "contextNavigation": "Bağlam navigasyonu"
   },
   "home": {
-    "title": "Easy Dataset",
+    "title": "数据预处理",
     "subtitle": "Büyük Dil Modelleri için ince ayar veri setleri oluşturmak için güçlü bir araç",
     "createProject": "Proje Oluştur",
     "searchDataset": "Açık Veri Setlerinde Ara"
@@ -1841,7 +1841,7 @@
     "taskIdLabel": "Görev ID",
     "pageInfo": "Sayfa: {{page}} / {{totalPages}}",
     "noMatchingResults": "Mevcut filtrelere uyan değerlendirme sonucu yok",
-    "reportFooter": "Easy Dataset Değerlendirme Sistemi · AI tarafından oluşturuldu",
+    "reportFooter": "数据预处理 Değerlendirme Sistemi · AI tarafından oluşturuldu",
     "finalSelection": "Son Seçim: ",
     "questionsSuffix": " soru",
     "noModelsAvailable": "Model mevcut değil, lütfen önce ayarlarda modelleri yapılandırın",

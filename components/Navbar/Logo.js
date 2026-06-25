@@ -32,9 +32,9 @@ export default function Logo({ theme }) {
           }
         }}
       >
-        <Box component="img" src="/imgs/logo.svg" alt="Easy Dataset Logo" sx={styles.logoImageStyles} />
+        <Box component="img" src="/imgs/logo.png" alt="数据预处理 Logo" sx={styles.logoImageStyles} />
         <Typography variant="h6" sx={styles.getLogoTextStyles(theme)}>
-          Easy DataSet
+          数据预处理
         </Typography>
       </Box>
     </Tooltip>

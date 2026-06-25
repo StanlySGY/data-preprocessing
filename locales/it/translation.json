@@ -348,7 +348,7 @@
     "detailInfo": "Informazioni dettagliate"
   },
   "home": {
-    "title": "Easy Dataset",
+    "title": "数据预处理",
     "subtitle": "Un potente strumento per creare Dataset di fine-tuning per Large Language Models (LLM)",
     "createProject": "Crea Progetto",
     "searchDataset": "Cerca Dataset Pubblici"

@@ -318,7 +318,7 @@
     "collapse": "Recolher Conteúdo"
   },
   "home": {
-    "title": "Easy Dataset",
+    "title": "数据预处理",
     "subtitle": "Uma poderosa ferramenta de criação de conjunto de dados para ajuste fino de grandes modelos de linguagem",
     "createProject": "Criar Projeto",
     "searchDataset": "Pesquisar Conjunto de Dados Público"
@@ -1015,7 +1015,7 @@
   },
   "migration": {
     "title": "【Importante】Migração de Dados Históricos",
-    "description": "Para melhorar o desempenho de recuperação de grandes conjuntos de dados, a partir da versão 1.3.1, o Easy Dataset mudou o método de armazenamento de arquivos para armazenamento em banco de dados local. Detectamos que você tem projetos históricos que ainda não foram migrados. Antes de concluir a migração, você não poderá acessar esses projetos. Por favor, conclua a migração o mais rápido possível!",
+    "description": "Para melhorar o desempenho de recuperação de grandes conjuntos de dados, a partir da versão 1.3.1, o 数据预处理 mudou o método de armazenamento de arquivos para armazenamento em banco de dados local. Detectamos que você tem projetos históricos que ainda não foram migrados. Antes de concluir a migração, você não poderá acessar esses projetos. Por favor, conclua a migração o mais rápido possível!",
     "projectsList": "Projetos Não Migrados",
     "migrate": "Iniciar Migração",
     "migrating": "Migrando...",
@@ -1763,7 +1763,7 @@
     "taskIdLabel": "ID da Tarefa",
     "pageInfo": "Página {{page}} / {{totalPages}}",
     "noMatchingResults": "Nenhum resultado de avaliação correspondente ainda",
-    "reportFooter": "Easy Dataset Evaluation System · Gerado por IA",
+    "reportFooter": "数据预处理 Evaluation System · Gerado por IA",
     "finalSelection": "Seleção Final:",
     "questionsSuffix": "questões",
     "noModelsAvailable": "Nenhum modelo disponível ainda, por favor, configure o modelo nas configurações primeiro",

@@ -77,7 +77,7 @@ export default function MobileDrawer({
       {/* Drawer Header */}
       <Box sx={styles.getDrawerHeaderStyles(theme)}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <Box component="img" src="/imgs/logo.svg" alt="Easy Dataset Logo" sx={{ width: 32, height: 32 }} />
+          <Box component="img" src="/imgs/logo.png" alt="数据预处理 Logo" sx={{ width: 32, height: 32 }} />
           <Typography variant="h6" component="h2" sx={{ fontWeight: 700, fontSize: '1.15rem' }}>
             {t('common.navigation', 'Navigation')}
           </Typography>
