@@ -81,7 +81,7 @@ const UpdateChecker = () => {
       setUpdateInfo(prev => ({
         ...prev,
         ...info,
-        releaseUrl: `https://github.com/ConardLi/easy-dataset/releases`
+        releaseUrl: null
       }));
       setOpen(true);
     });

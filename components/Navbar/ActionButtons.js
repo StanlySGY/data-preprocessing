@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LanguageSwitcher from '../LanguageSwitcher';
 import UpdateChecker from '../UpdateChecker';
@@ -88,20 +87,6 @@ export default function ActionButtons({
         </IconButton>
       </Tooltip>
 
-      {/* GitHub - Hide at larger tablet screens and below */}
-      <Tooltip title={t('common.visitGitHub', 'View on GitHub')}>
-        <IconButton
-          component="a"
-          href="https://github.com/ConardLi/easy-dataset"
-          target="_blank"
-          rel="noopener noreferrer"
-          size="medium"
-          aria-label={t('common.visitGitHub', 'Open GitHub repository')}
-          sx={styles.getIconButtonStyles(theme)}
-        >
-          <GitHubIcon fontSize="small" />
-        </IconButton>
-      </Tooltip>
 
       {/* Update Checker - Hide below xl */}
       <Box sx={{ display: { xs: 'none', xl: 'flex' } }}>

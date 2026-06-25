@@ -52,12 +52,6 @@ function createMenu(mainWindow, clearCache) {
             });
           }
         },
-        {
-          label: 'Visit GitHub',
-          click: () => {
-            shell.openExternal('https://github.com/ConardLi/easy-dataset');
-          }
-        }
       ]
     },
     {

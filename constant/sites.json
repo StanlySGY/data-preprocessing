@@ -91,16 +91,15 @@
   },
   {
     "name": {
-      "zh-CN": "GitHub开源数据集",
-      "en": "GitHub Awesome Public Datasets",
-      "tr": "GitHub Harika Açık Veri Setleri"
+      "zh-CN": "开源数据集集合",
+      "en": "Awesome Public Datasets",
+      "tr": "Harika Açık Veri Setleri"
     },
     "link": "https://github.com/awesomedata/awesome-public-datasets",
-    "image": "/imgs/github.png",
     "description": {
-      "zh-CN": "在GitHub上整理的优秀的公开数据集资源，涉及多个领域和方向。",
-      "en": "A curated list of awesome public datasets on GitHub, covering multiple domains and topics.",
-      "tr": "GitHub'da birden fazla alanı ve konuyu kapsayan seçilmiş açık veri setleri listesi."
+      "zh-CN": "精选的优秀公开数据集资源，涵盖多个领域和方向。",
+      "en": "A curated list of awesome public datasets, covering multiple domains and topics.",
+      "tr": "Birden fazla alanı ve konuyu kapsayan seçilmiş açık veri setleri listesi."
     },
     "labels": ["popular"]
   },
@@ -237,7 +236,7 @@
       "en": "The Pile",
       "tr": "The Pile"
     },
-    "link": "https://github.com/EleutherAI/the-pile",
+    "link": "https://eleutherai.github.io/the-pile/",
     "description": {
       "zh-CN": "由多个数据集组成的大型语言模型训练数据集，涵盖多种文本类型。",
       "en": "A large language model training dataset composed of multiple datasets, covering various text types.",

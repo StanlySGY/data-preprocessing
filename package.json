@@ -3,11 +3,9 @@
   "version": "1.7.3",
   "private": true,
   "author": {
-    "name": "ConardLi",
-    "email": "1009903985@qq.com",
-    "url": "https://github.com/ConardLi"
+    "name": "Easy Dataset Team",
+    "email": "support@easydataset.com"
   },
-  "homepage": "https://github.com/ConardLi/easy-dataset",
   "scripts": {
     "db:studio": "prisma studio",
     "db:push": "prisma db push",

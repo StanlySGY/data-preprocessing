@@ -28,7 +28,6 @@ import ChatIcon from '@mui/icons-material/Chat';
 import ImageIcon from '@mui/icons-material/Image';
 import StorageIcon from '@mui/icons-material/Storage';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
@@ -375,23 +374,6 @@ export default function MobileDrawer({
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding sx={{ mb: 0.5 }}>
-            <ListItemButton
-              onClick={() => {
-                window.open('https://github.com/ConardLi/easy-dataset', '_blank');
-                toggleDrawer();
-              }}
-              sx={styles.getDrawerListItemButtonStyles(theme)}
-            >
-              <ListItemIcon sx={styles.listItemIconStyles}>
-                <GitHubIcon sx={styles.getIconColorStyles(theme)} />
-              </ListItemIcon>
-              <ListItemText
-                primary={t('common.viewOnGitHub', 'View on GitHub')}
-                primaryTypographyProps={styles.listItemTextStyles}
-              />
-            </ListItemButton>
-          </ListItem>
 
           <ListItem disablePadding sx={{ mb: 1 }}>
             <Box sx={{ px: 1, width: '100%' }}>
