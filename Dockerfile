@@ -30,16 +30,8 @@ RUN pnpm install
 # 复制源代码
 COPY . .
 
-# 根据目标平台设置Prisma二进制目标并构建应用
-RUN if [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
-        echo "Configuring for ARM64 platform"; \
-        sed -i 's/binaryTargets = \[.*\]/binaryTargets = \["linux-musl-arm64-openssl-3.0.x"\]/' prisma/schema.prisma; \
-        PRISMA_CLI_BINARY_TARGETS="linux-musl-arm64-openssl-3.0.x" pnpm build; \
-    else \
-        echo "Configuring for AMD64 platform (default)"; \
-        sed -i 's/binaryTargets = \[.*\]/binaryTargets = \["linux-musl-openssl-3.0.x"\]/' prisma/schema.prisma; \
-        PRISMA_CLI_BINARY_TARGETS="linux-musl-openssl-3.0.x" pnpm build; \
-    fi
+# 构建应用（schema.prisma 已包含所有需要的 binaryTargets）
+RUN pnpm build
 
 # 构建完成后移除开发依赖，只保留生产依赖
 RUN pnpm prune --prod
