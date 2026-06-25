@@ -1,6 +1,5 @@
 services:
   data-preprocessing:
-    build: .
     image: data-preprocessing:v1.0.2
     container_name: data-preprocessing
     ports:
