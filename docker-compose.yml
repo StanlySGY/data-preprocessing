@@ -1,7 +1,7 @@
 services:
-  easy-dataset:
-    build: .
-    container_name: easy-dataset
+  data-preprocessing:
+    image: data-preprocessing:v1.0.0
+    container_name: data-preprocessing
     ports:
       - '1717:1717'
     volumes:
