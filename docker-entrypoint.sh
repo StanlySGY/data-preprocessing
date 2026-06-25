@@ -1,70 +1,30 @@
 #!/bin/sh
 set -e
 
-# Colors for output
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
-RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-# Define paths
-PRISMA_DIR="/app/prisma"
 PRISMA_TEMPLATE_DIR="/app/prisma-template"
-DB_FILE="$PRISMA_DIR/db.sqlite"
-LOCAL_DB_DIR="/app/local-db"
+PRISMA_DIR="/app/prisma"
 
-echo "${GREEN}=== Easy Dataset Database Initialization ===${NC}"
+echo "${GREEN}=== 数据预处理 数据库初始化 ===${NC}"
 
-# Create prisma directory if it doesn't exist
-if [ ! -d "$PRISMA_DIR" ]; then
-    echo "${YELLOW}Creating prisma directory...${NC}"
+# 复制 prisma schema 模板（每次启动都更新）
+if [ -d "$PRISMA_TEMPLATE_DIR" ]; then
     mkdir -p "$PRISMA_DIR"
+    cp -rn "$PRISMA_TEMPLATE_DIR"/* "$PRISMA_DIR/" 2>/dev/null || true
 fi
 
-# Check if database file exists
-if [ ! -f "$DB_FILE" ]; then
-    echo "${YELLOW}Database file not found at: $DB_FILE${NC}"
+# 确保 local-db 目录存在
+mkdir -p /app/local-db
 
-    # Check if local-db has files (possible configuration issue)
-    if [ -d "$LOCAL_DB_DIR" ] && [ -n "$(ls -A $LOCAL_DB_DIR 2>/dev/null | grep -v 'empty.txt')" ]; then
-        echo "${YELLOW}Note: local-db contains files but database is missing.${NC}"
-        echo "${YELLOW}If you have existing data, ensure prisma volume is mounted.${NC}"
-    fi
+# 运行 prisma db push 创建/更新数据库 schema
+echo "${GREEN}初始化数据库 schema...${NC}"
+cd /app
+pnpm prisma db push --skip-generate 2>&1 || true
 
-    # Safety check: only initialize if directory is completely empty
-    if [ -z "$(ls -A $PRISMA_DIR 2>/dev/null)" ]; then
-        # Directory is completely empty - safe to initialize
-        echo "${GREEN}Prisma directory is empty. Initializing from template...${NC}"
-
-        if [ -d "$PRISMA_TEMPLATE_DIR" ]; then
-            cp -r "$PRISMA_TEMPLATE_DIR"/* "$PRISMA_DIR/"
-            echo "${GREEN}Database initialized from template!${NC}"
-        else
-            echo "${YELLOW}No template found. Running prisma db push...${NC}"
-            cd /app
-            pnpm prisma db push --accept-data-loss
-            echo "${GREEN}Database created successfully!${NC}"
-        fi
-    else
-        # Directory is not empty but database is missing - error out
-        echo "${RED}ERROR: Database file missing but prisma directory is not empty!${NC}"
-        echo "${YELLOW}This may indicate a configuration problem.${NC}"
-        echo ""
-        echo "${YELLOW}Files in $PRISMA_DIR:${NC}"
-        ls -lh "$PRISMA_DIR"
-        echo ""
-        echo "${YELLOW}Please either:${NC}"
-        echo "  1. Remove all files in prisma directory to re-initialize"
-        echo "  2. Or run: pnpm prisma db push --accept-data-loss"
-        echo ""
-        exit 1
-    fi
-else
-    echo "${GREEN}Database file exists: $DB_FILE${NC}"
-fi
-
-echo "${GREEN}=== Database Ready! Starting application... ===${NC}"
+echo "${GREEN}=== 数据库就绪，启动应用 ===${NC}"
 echo ""
 
-# Execute the command passed to the container
 exec "$@"

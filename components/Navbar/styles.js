@@ -77,8 +77,11 @@ export const logoImageStyles = {
   width: 40,
   height: 40,
   mr: 1.5,
+  borderRadius: '8px',
+  backgroundColor: 'rgba(255,255,255,0.9)',
+  padding: '3px',
   transition: 'transform 0.2s ease',
-  filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2))'
+  boxShadow: '0 1px 4px rgba(0,0,0,0.15)'
 };
 
 // Logo 文字样式

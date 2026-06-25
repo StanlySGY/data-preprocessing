@@ -77,7 +77,7 @@ export default function MobileDrawer({
       {/* Drawer Header */}
       <Box sx={styles.getDrawerHeaderStyles(theme)}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <Box component="img" src="/imgs/logo.png" alt="数据预处理 Logo" sx={{ width: 40, height: 40, filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2))' }} />
+          <Box component="img" src="/imgs/logo.png" alt="数据预处理 Logo" sx={{ width: 36, height: 36, borderRadius: '6px', backgroundColor: 'rgba(255,255,255,0.9)', padding: '2px' }} />
           <Typography variant="h6" component="h2" sx={{ fontWeight: 700, fontSize: '1.15rem' }}>
             {t('common.navigation', 'Navigation')}
           </Typography>
